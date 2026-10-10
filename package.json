@@ -1,0 +1,17 @@
+{
+  "name": "shopfloor-andon",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Shop Floor Connectivity & Andon System (fictional plant demo)",
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "go": "npm install && npm run build && npm start",
+    "build": "npm run build -w web",
+    "start": "npm run start -w server",
+    "dev": "npm run dev -w server",
+    "sim": "npm run sim -w server",
+    "test": "npm run build && npm test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web"
+  },
+  "engines": { "node": ">=22.5" }
+}

@@ -1,0 +1,35 @@
+:root { --green: #1f9d55; --yellow: #e0a800; --red: #d63a3a; --grey: #5b6270; --bg: #12161c; --card: #1b212b; --text: #e8ebf0; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, Segoe UI, sans-serif; }
+.app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+h1 { margin: 0; font-size: 1.5rem; }
+small { color: #9aa3b2; }
+.right { display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--grey); display: inline-block; }
+.dot.on { background: var(--green); }
+button { background: #2b3442; color: var(--text); border: 1px solid #3a4558; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+button:hover:not(:disabled) { background: #364156; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+nav { display: flex; gap: 8px; margin: 16px 0; }
+nav button.active { background: #3b6fd4; border-color: #3b6fd4; }
+.banner { margin-top: 12px; background: var(--red); padding: 10px 14px; border-radius: 6px; font-weight: 600; }
+.error { margin-top: 8px; color: #ff9b9b; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.tile { border-radius: 10px; padding: 16px; color: #fff; position: relative; }
+.tile.running { background: var(--green); }
+.tile.idle { background: var(--yellow); color: #1b1b1b; }
+.tile.down { background: var(--red); animation: pulse 1.4s infinite; }
+.tile.unknown { background: var(--grey); }
+.wc { font-size: 1.6rem; font-weight: 700; }
+.name { opacity: .9; }
+.st { font-size: 1.3rem; font-weight: 700; margin-top: 10px; }
+.sub { min-height: 1.2em; opacity: .95; }
+dl { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin: 12px 0 0; font-size: .9rem; }
+dt { opacity: .85; } dd { margin: 0; font-weight: 600; text-align: right; }
+.tilealert { margin-top: 10px; background: #fff; color: var(--red); font-weight: 700; text-align: center; border-radius: 4px; padding: 3px; }
+@keyframes pulse { 50% { filter: brightness(1.25); } }
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #2b3442; }
+th { background: #222a36; }
+.red { color: #ff7a7a; }
